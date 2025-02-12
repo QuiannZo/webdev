@@ -83,12 +83,12 @@ fetchData();
 
 // 11. Modules
 // Exporting (in a separate file)
-// export const PI = 3.14;
-// export function square(n) { return n * n; }
+export const PI = 3.14;
+export function square(n) { return n * n; }
 
 // Importing (in another file)
-// import { PI, square } from "./math.js";
-// console.log(square(4));
+import { PI, square } from "./math.js";
+console.log(square(4));
 
 // 12. Event Handling (DOM)
 document.getElementById("btn").addEventListener("click", () => {

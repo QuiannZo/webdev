@@ -107,15 +107,29 @@ HTML (HyperText Markup Language) is the standard language for creating web pages
 
 ---
 
-## 6️⃣ Forms
+## 6️⃣ Forms and tags
 
 ```html
-<form action="submit.php" method="post">
-    <label for="name">Name:</label>
-    <input type="text" id="name" name="name" required>
+<form action="submit.php" method="post"> <!-- A form structure -->
+    <label for="name">Name:</label> <!-- Text label -->
+    <input type="text" id="name" name="name" required> <!-- input of type "text" -->
+    <br> <!-- Enter '\n' -->
+    <input type="submit" value="Submit"> <!-- input of type "submit" -->
+
+    <!-- You can use placeholders as well -->
+    <label>password</label>
     <br>
-    <input type="submit" value="Submit">
+    <input type="password" placeholder="password" required>
+
 </form>
+
+<!-- Other tags: -->
+
+<button></button>
+<label></label>
+<select></select>
+<option></option>
+<textarea></textarea>
 ```
 
 ✅ `: User input fields ✅ `: Describes inputs
@@ -162,4 +176,3 @@ HTML (HyperText Markup Language) is the standard language for creating web pages
 ---
 
 🎉 Now you know the basics of HTML! Want a CSS guide next? 😃
-

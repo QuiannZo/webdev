@@ -92,10 +92,10 @@ HTML (HyperText Markup Language) is the standard language for creating web pages
 
 ```html
 <table border="1">
-    <tr>
+    <th>
         <th>Name</th>
         <th>Age</th>
-    </tr>
+    </th>
     <tr>
         <td>Alice</td>
         <td>25</td>
@@ -123,13 +123,34 @@ HTML (HyperText Markup Language) is the standard language for creating web pages
 
 </form>
 
+<!-- inputs have many other types as checkboxes, radio buttons, files, and so on. -->
+
 <!-- Other tags: -->
 
 <button></button>
 <label></label>
-<select></select>
-<option></option>
-<textarea></textarea>
+<select></select> <!-- his tag creates a dropdown menu (also known as a "select box") that allows users to choose from multiple options.
+
+Inside a <select> element, you place <option> elements to define the selectable choices. -->
+
+<label for="cars">Choose a car:</label>
+<select id="cars" name="cars">
+    <option value="volvo">Volvo</option>
+    <option value="bmw">BMW</option>
+    <option value="audi">Audi</option>
+</select>
+
+
+<option></option> <!--  This tag is used inside a <select> element to define the choices available in the dropdown menu. -->
+
+<textarea></textarea><!-- This tag creates a multi-line text input field, allowing users to enter larger amounts of text, such as comments or messages. -->
+
+<label for="message">Your message:</label>
+<textarea id="message" name="message" rows="4" cols="50">
+    Type your message here...
+</textarea>
+
+
 ```
 
 ✅ `: User input fields ✅ `: Describes inputs
@@ -176,3 +197,149 @@ HTML (HyperText Markup Language) is the standard language for creating web pages
 ---
 
 🎉 Now you know the basics of HTML! Want a CSS guide next? 😃
+
+## 10. CSS in HTML
+
+### In-line
+
+```html
+<p style="font-size: 20px">Hello world!</p>
+```
+
+## Internal
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My First Webpage</title>
+    <style>
+        p{
+            font-size: 20px;
+            font-weight: bold;
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <p>This is a paragraph of text.</p>
+</body>
+</html>
+```
+
+## 11. HTML-CSS Classes and id
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My First Webpage</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body>
+    <p class="title">This is a paragraph of text.</p>
+</body>
+</html>
+```
+
+```css
+
+.title
+{
+    font-size: 20px;
+    background-color: red;
+}
+
+```
+
+## 12. HTML-CSS Div
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My First Webpage</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body>
+    <div class="division">
+        <p>This is a paragraph of text.</p>
+        <button type="submit">submit</button>
+    </div>
+</body>
+</html>
+```
+
+```css
+
+.division
+{
+    background-color: red;
+}
+
+.division p /* Alters P inside the division. */
+{
+    color: red;
+}
+
+.division p:hover /* Alters P when hovered. */
+{
+    color: blue;
+}
+
+```
+
+## 13. HTML-CSS parent and child divs
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My First Webpage</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body>
+    <div class="division">
+        <div class="division-inner">
+            <p>1</p>
+        </div>
+        <div class="division-inner">
+            <p>2</p>
+        </div>
+    </div>
+</body>
+</html>
+```
+
+```css
+
+.division
+{
+    background-color: red;
+    width: 500px;
+    height: 500px;
+    display: flex; /*display flex in the parent will put child divs horizontally.*/
+    align-items: flex-end; /*Vertical alignment to the bottom.*/
+    justify-content: center; /*horizontal alignment to the center.*/
+    justify-content: space-between; /*horizontal alignment, leaves an equal space between child divs.*/
+    justify-content: space-around; /*horizontal alignment, leaves an equal space between child divs and the left and right.*/
+    flex-wrap: wrap; /*If theres 8 divs for example, each 100px and only a 400px width, then this will take the rest bellow so they can have the desired width.*/
+}
+
+.division-inner{
+    width: 100px;
+    height:100px;
+    font-size: 20px;
+}
+
+.division-inner:nth-child(1){ /*Edits the first division child.*/
+    background: purple;
+    flex-basis: 40%; /*takes 40% of the column.*/
+}
+
+.division-inner:nth-child(2){ /*Edits the second division child...*/
+    background: yellow;
+    flex: 1; /*Takes the remaining of the column.*/
+}
+
+```

@@ -46,7 +46,22 @@ width: 100px;
 height: 100px;
 padding: 10px;
 border: 1px solid black;
+border: 2px dashed red;
 margin: 10px;
+```
+
+## 5.1 Example: Background image
+```css
+.division
+{
+    background-image:url(imgs/background.png);
+    background-repeat: none;
+    background-position: center;
+    background-size: cover;
+          /* T     R   B    L */
+    margin: 40px 40px 40px 40px; /* Adds a 40px margin to all sides outside of the div "division".*/
+    padding: 30px; /* Adds a 30px padding to all sides inside the div "division".*/
+}
 ```
 
 ## 6. Positioning

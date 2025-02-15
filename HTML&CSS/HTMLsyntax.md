@@ -280,6 +280,7 @@ Inside a <select> element, you place <option> elements to define the selectable 
 .division p /* Alters P inside the division. */
 {
     color: red;
+    transition: 1s; /*How long it takes to apply the hover color change.*/
 }
 
 .division p:hover /* Alters P when hovered. */

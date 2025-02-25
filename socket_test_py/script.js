@@ -12,6 +12,11 @@ function sendMessage() {
     socket.send("Hello from the client");
 }
 
+function closeConnection() {
+    socket.send("Closed");
+    socket.close();
+}
+
 socket.onclose = () => {
     console.log("Closed connection");
 };

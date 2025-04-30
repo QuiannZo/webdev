@@ -1,23 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
-<head> 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Personal Portfolio</title>
-    <link rel="stylesheet" href="style.css" type="text/css">
-</head>
-<body>
-    <div id="header">
-        <div class="container">
-            <nav>
-                <img src="imgs/logo.png" class="logo">
-                <ul>
-                    <li><a href="#">home</a></li>
-                    <li><a href="#">about me</a></li>
-                    <li><a href="#">portfolio</a></li>
-                </ul>
-            </nav>
+    <head>
+        <title>About Me!</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="style.css" rel="stylesheet">
+    </head>
+    <body>
+        <div id="header">
+            <div class="container">
+                <nav>
+                    <img src="imgs/logo.png" class="logo">
+                    <ul>
+                        <li><a href="https://www.instagram.com/quiannzc/">Instagram</a></li>
+                        <li><a href="https://www.linkedin.com/in/quiann-zolfaghari">LinkedIn</a></li>
+                        <li><a href="https://github.com/QuiannZo">GitHub</a></li>
+                    </ul>
+                </nav>
+                <div class="header-text">
+                    <h2>Computer Science @ UCR</h2>
+                    <h1>Hi, I'm <span>Quiann Zolfaghari</span></h1>
+                    <p>Nice to see you here! Know me better by exploring this.</p>
+                </div>
+            </div>
         </div>
-    </div>
-</body>
+        <!------------about------------>
+        <div id="about">
+            <div class="container">
+                <div class="row">
+                    <div class="about-col1">
+                        <img src="imgs/neofetch.jpg" alt="About me">
+                    </div>
+                    <div class="about-col2">
+                        <h1 class="subtitle">About Me</h1>
+                        <p>I'm a Computer Science student at the University of Costa Rica (UCR) with a strong passion for technology and problem-solving.
+                            My main goals are to continuously learn new technologies, deepen my understanding of software development, and apply my knowledge
+                            in real-world projects. I am particularly interested in areas like web development, and data engineering, always seeking opportunities
+                            to expand my skills and work on innovative solutions. 
+                            I thrive in collaborative environments and enjoy tackling complex challenges that push me to grow as a professional.</p>
+
+                        <div class="tab-tittles">
+                            <p class="skills active-link" onclick="openTab('skills')">Skills</p>
+                            <p class="skills" onclick="openTab('education')">Education</p>
+                            <p class="skills" onclick="openTab('certificates')">Certificates</p>
+                        </div>
+                        <!----------skills---------->
+                        <div class="tab-content active-tab" id="skills">
+                            <ul>
+                                <li><span>UI/UX</span><br>Programming and design</li>
+                                <li><span>UI/UX</span><br>Programming and design</li>
+                                <li><span>UI/UX</span><br>Programming and design</li>
+                            </ul>
+                        </div>
+                        <!----------Education---------->
+                        <div class="tab-content" id="education">
+                            <ul>
+                                <li><span>Universidad de Costa Rica</span><br>Computer science. My learning process was mainly mathematics and programming,
+                                including Artificial Intelligence, web applications, desktop applications, and more.</li>
+                                <li><span>UI/UX</span><br>Programming and design</li>
+                            </ul>
+                        </div>
+                        <!----------Certificates---------->
+                        <div class="tab-content" id="certificates">
+                            <ul>
+                                <li><span>UI/UX</span><br>Programming and design</li>
+                                <li><span>UI/UX</span><br>Programming and design</li>
+                                <li><span>UI/UX</span><br>Programming and design</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script>
+
+            var tablinks = document.getElementsByClassName("skills")
+            var tabcontents = document.getElementsByClassName("tab-content")
+
+            function openTab(tabname){
+                for(tablink of tablinks){
+                    tablink.classList.remove("active-link");
+                }
+                for(tabcontent of tabcontents){
+                    tabcontent.classList.remove("active-tab");
+                }
+                event.currentTarget.classList.add("active-link");
+                document.getElementById(tabname).classList.add("active-tab");
+            }
+
+        </script>
+    </body>
+    <!-------------------->
+    <!------------footer------------>
+    <footer class="copy">
+        <p>&copy; 2025 Quiann Zolfaghari. University of Costa Rica.</p>
+    </footer>
 </html>
